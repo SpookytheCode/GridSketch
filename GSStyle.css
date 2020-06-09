@@ -1,4 +1,12 @@
+#wrapperDiv {
+  display: grid;
+}
+
 #wrapperDiv > div {
 
+
+}
+
+.gridSquare {
   
 }

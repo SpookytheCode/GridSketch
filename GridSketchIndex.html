@@ -11,8 +11,30 @@
 
 
   <script>
-    let gridSize = 16;
+    let gridSides = 16;
+    let gridSize = gridSides**2;
 
+    // set individual square side values
+    const vw = Math.max(document.documentElement.clientWidth || 0);
+    let squareSides = (vw / gridSides); 
+
+
+
+    let containerDiv = document.getElementById("wrapperDiv");
+
+
+    
+
+    for (i = gridSize; i > 0; i--) {
+      let newDiv = document.createElement("div");
+      newDiv.classList.add("gridSquare");
+      containerDiv.appendChild(newDiv);
+    }
+
+    
+    /* function newParameterEntered () {
+      gridSides = // get text field value
+    } */
   </script>
 </body>
 </html>
