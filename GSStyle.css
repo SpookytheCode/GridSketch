@@ -1,5 +1,10 @@
 #wrapperDiv {
   display: grid;
+  height: 80vh;
+  width: 80vh;
+  margin: auto;
+  
+  
 }
 
 #wrapperDiv > div {

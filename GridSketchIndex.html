@@ -22,19 +22,27 @@
 
     let containerDiv = document.getElementById("wrapperDiv");
 
-
+    /* function columnStringer (gridSides) {
+      let columnString = `${squareSides}px`;
+      for (i = 1; i < gridSides; i++) {
+        columnString += ` ${squareSides}px`;
+      }
+    } */
     
 
     for (i = gridSize; i > 0; i--) {
       let newDiv = document.createElement("div");
       newDiv.classList.add("gridSquare");
+      
       containerDiv.appendChild(newDiv);
     }
 
-    
+        
     /* function newParameterEntered () {
       gridSides = // get text field value
     } */
+
+    // https://stackoverflow.com/questions/57550082/creating-a-16x16-grid-using-javascript
   </script>
 </body>
 </html>
