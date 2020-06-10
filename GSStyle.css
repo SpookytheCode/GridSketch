@@ -1,3 +1,8 @@
+:root {
+  --gridRows: 1;
+  --gridCols: 1;
+}
+
 #wrapperDiv {
   display: grid;
   height: 80vh;

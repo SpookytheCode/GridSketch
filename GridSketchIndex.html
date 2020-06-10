@@ -21,6 +21,8 @@
 
 
     let containerDiv = document.getElementById("wrapperDiv");
+    let cols = gridSides;
+    let rows = gridSides;
 
     /* function columnStringer (gridSides) {
       let columnString = `${squareSides}px`;
@@ -29,12 +31,13 @@
       }
     } */
     
-
-    for (i = gridSize; i > 0; i--) {
-      let newDiv = document.createElement("div");
-      newDiv.classList.add("gridSquare");
-      
-      containerDiv.appendChild(newDiv);
+    function makeGrid (cols, rows) {
+      containerDiv.style.setProperty('--gridRows', rows)
+      for (i = gridSize; i > 0; i--) {
+        let newDiv = document.createElement("div");
+        newDiv.classList.add("gridSquare");
+        containerDiv.appendChild(newDiv);
+      }
     }
 
         
