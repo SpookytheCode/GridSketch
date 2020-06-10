@@ -39,7 +39,13 @@
         newDiv.classList.add("gridSquare");
         containerDiv.appendChild(newDiv);
       }
-      console.log(document.getElementById('gridSizeInput').value);
+    }
+
+    let gridBoxes = document.getElementsByClassName('gridSquare');
+    gridBoxes.addEventListener('mouseenter', boxShader);
+
+    function boxShader() {
+      
     }
 
 
