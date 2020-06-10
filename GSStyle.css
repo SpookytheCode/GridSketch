@@ -3,13 +3,17 @@
   --gridCols: 1;
 }
 
+#buttonWrap {
+  justify-content: center;
+}
+
 #wrapperDiv {
   display: grid;
   height: 80vh;
   width: 80vh;
   margin: auto;
-  
-  
+  grid-template-rows: repeat(var(--gridRows), 1fr);
+  grid-template-columns: repeat(var(--gridCols), 1fr);
 }
 
 #wrapperDiv > div {

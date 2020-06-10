@@ -6,33 +6,33 @@
   <link rel="stylesheet" type="text/css" href="GSStyle.css">
 </head>
 <body>
+  <div id="buttonWrap">
+    <label for="gridSizeInput">Enter grid size:</label>
+    <input type="text" id="gridSizeInput" name="gridSizeInput" value="16">
+    <button type="button" id="gridSizeButton">Gridify</button>
+  </div>
   <div id="wrapperDiv"></div>
 
 
 
   <script>
-    let gridSides = 16;
+    let gridSides = document.getElementById('gridSizeInput').value;
     let gridSize = gridSides**2;
-
-    // set individual square side values
-    const vw = Math.max(document.documentElement.clientWidth || 0);
-    let squareSides = (vw / gridSides); 
+    let cols = gridSides;
+    let rows = gridSides;
 
 
 
     let containerDiv = document.getElementById("wrapperDiv");
-    let cols = gridSides;
-    let rows = gridSides;
-
-    /* function columnStringer (gridSides) {
-      let columnString = `${squareSides}px`;
-      for (i = 1; i < gridSides; i++) {
-        columnString += ` ${squareSides}px`;
-      }
-    } */
+    
     
     function makeGrid (cols, rows) {
+      gridSides = document.getElementById('gridSizeInput').value;
+      cols = gridSides;
+      rows = gridSides;
+      gridSize = gridSides**2;
       containerDiv.style.setProperty('--gridRows', rows)
+      containerDiv.style.setProperty('--gridCols', cols)
       for (i = gridSize; i > 0; i--) {
         let newDiv = document.createElement("div");
         newDiv.classList.add("gridSquare");
@@ -40,12 +40,9 @@
       }
     }
 
-        
-    /* function newParameterEntered () {
-      gridSides = // get text field value
-    } */
+    document.getElementById('gridSizeButton').addEventListener("click", makeGrid(cols, rows));
 
-    // https://stackoverflow.com/questions/57550082/creating-a-16x16-grid-using-javascript
+        
   </script>
 </body>
 </html>
