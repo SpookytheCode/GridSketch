@@ -4,7 +4,21 @@
 }
 
 #buttonWrap {
-  justify-content: center;
+  text-align: center;
+}
+
+#gridSizeInput {
+  margin: 12px 0px 15px 0px;
+}
+
+#gridSizeButton {
+  margin-bottom: 15px;
+  border-radius: 0px;
+} 
+
+#gridSizeButton:hover {
+  color: red;
+  text-shadow: 2px 2px red;
 }
 
 #wrapperDiv {

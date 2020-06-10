@@ -8,7 +8,7 @@
 <body>
   <div id="buttonWrap">
     <label for="gridSizeInput">Enter grid size:</label>
-    <input type="text" id="gridSizeInput" name="gridSizeInput" value="16">
+    <input type="text" id="gridSizeInput" name="gridSizeInput" value="16"> <br>
     <button type="button" id="gridSizeButton">Gridify</button>
   </div>
   <div id="wrapperDiv"></div>
@@ -16,6 +16,7 @@
 
 
   <script>
+
     let gridSides = document.getElementById('gridSizeInput').value;
     let gridSize = gridSides**2;
     let cols = gridSides;
@@ -38,9 +39,12 @@
         newDiv.classList.add("gridSquare");
         containerDiv.appendChild(newDiv);
       }
+      console.log(document.getElementById('gridSizeInput').value);
     }
 
-    document.getElementById('gridSizeButton').addEventListener("click", makeGrid(cols, rows));
+
+    document.getElementById('gridSizeButton').addEventListener("click", makeGrid);
+
 
         
   </script>
