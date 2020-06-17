@@ -41,12 +41,21 @@
       }
     }
 
-    let gridBoxes = document.getElementsByClassName('gridSquare');
-    gridBoxes.addEventListener('mouseenter', boxShader);
+   
 
-    function boxShader() {
-      
+    let gridBoxes = document.getElementsByClassName('gridSquare');
+    let gridBoxArray = [...gridBoxes];
+
+    function colorizer (targetSquare) {
+      targetSquare.classList.add("coloredSquare");
     }
+    
+    gridBoxArray.forEach(function(item) {
+      item.addEventListener("mouseenter", colorizer);
+    })
+
+    
+
 
 
     document.getElementById('gridSizeButton').addEventListener("click", makeGrid);

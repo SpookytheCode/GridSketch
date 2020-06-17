@@ -5,20 +5,27 @@
 
 #buttonWrap {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+
 
 #gridSizeInput {
   margin: 12px 0px 15px 0px;
 }
 
 #gridSizeButton {
+  background-color: skyblue;
+  color: black;
+  padding: 12px 26px;
   margin-bottom: 15px;
-  border-radius: 0px;
+  border: none;
 } 
 
 #gridSizeButton:hover {
-  color: red;
-  text-shadow: 2px 2px red;
+  color: white;
+  
+  
 }
 
 #wrapperDiv {
@@ -30,11 +37,6 @@
   grid-template-columns: repeat(var(--gridCols), 1fr);
 }
 
-#wrapperDiv > div {
-
-
-}
-
-.gridSquare {
-  
+.coloredSquare {
+  background-color: black;
 }
