@@ -26,6 +26,7 @@
 
     let containerDiv = document.getElementById("wrapperDiv");
     
+
     
     function makeGrid (cols, rows) {
       gridSides = document.getElementById('gridSizeInput').value;
@@ -39,24 +40,21 @@
         newDiv.classList.add("gridSquare");
         containerDiv.appendChild(newDiv);
       }
+      console.log(gridBoxArray);
     }
 
-   
-
-    let gridBoxes = document.getElementsByClassName('gridSquare');
-    let gridBoxArray = [...gridBoxes];
-
-    function colorizer (targetSquare) {
-      targetSquare.classList.add("coloredSquare");
+    let boxCollection = document.getElementsByClassName('gridSquare');
+    let gridBoxArray = Array.from(boxCollection);    
+    
+    function mouseListenizer (item) {
+      item.addEventListener('mouseover', function(event) {
+        event.target.style.backgroundColor = "black";
+      })
     }
-    
-    gridBoxArray.forEach(function(item) {
-      item.addEventListener("mouseenter", colorizer);
-    })
+
+    gridBoxArray.forEach(mouseListenizer);
 
     
-
-
 
     document.getElementById('gridSizeButton').addEventListener("click", makeGrid);
 

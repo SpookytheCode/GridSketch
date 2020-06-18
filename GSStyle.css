@@ -37,6 +37,6 @@
   grid-template-columns: repeat(var(--gridCols), 1fr);
 }
 
-.coloredSquare {
+.colorSquare {
   background-color: black;
 }
