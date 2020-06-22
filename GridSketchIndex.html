@@ -47,14 +47,20 @@
     function gridSquareListenerInit() {
       boxCollection = document.getElementsByClassName('gridSquare');
       gridBoxArray = Array.from(boxCollection);
-      console.log(gridBoxArray); 
-      gridBoxArray.forEach(item => item.classList.add('colorSquare'));
-    } 
-          
-  
+      for (let i = 0; i < gridSize; i++) {
+        gridBoxArray[i].addEventListener("mouseenter", function() {
+          gridBoxArray[i].classList.toggle('colorSquare');
+        });
+      }
+    }
 
+    /* gridBoxArray.forEach(function(item) {
+        item.addEventListener("mouseenter", boxPainter)}
+        );
 
-
+    function boxPainter(box) {
+      box.classList.add('colorSquare');
+    } */
     
 
     document.getElementById('gridSizeButton').addEventListener("click", makeGrid);
