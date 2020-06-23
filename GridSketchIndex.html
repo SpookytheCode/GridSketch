@@ -49,13 +49,22 @@
       gridBoxArray = Array.from(boxCollection);
       for (let i = 0; i < gridSize; i++) {
         gridBoxArray[i].addEventListener("mouseenter", function() {
-          gridBoxArray[i].classList.toggle('colorSquare');
+          gridBoxArray[i].classList.add('colorSquare');
         });
       }
     }
 
+    function gridWiper() {
+      document.getElementById('wrapperDiv').innerHTML = "";
+    }
 
-    document.getElementById('gridSizeButton').addEventListener("click", makeGrid);
+    function cleanStart() {
+      gridWiper();
+      makeGrid();
+    }
+
+
+    document.getElementById('gridSizeButton').addEventListener("click", cleanStart);
 
 
         
